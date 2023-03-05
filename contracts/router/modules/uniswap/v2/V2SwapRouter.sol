@@ -71,7 +71,7 @@ contract UniV2SwapRouter is Permit2Payments {
         // uint256 amountOutMinimum,
         address[] memory path,
         address payer
-    ) public returns (uint256 amountOut) {
+    ) public payable returns (uint256 amountOut) {
         address firstPair = IUniswapV2Factory(path[1]).getPair(path[0], path[2]);
 
         if (

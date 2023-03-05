@@ -31,6 +31,7 @@ contract AaveAdapter is RouterImmutables, Permit2Payments {
         address payer
     )
         public
+        payable
         returns (
             address inputToken,
             address outputToken,

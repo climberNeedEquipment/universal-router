@@ -185,7 +185,7 @@ contract SaddleSwapRouter is Permit2Payments {
         address recipient,
         address payer,
         address[] memory path
-    ) public returns (uint256 amountOut) {
+    ) public payable returns (uint256 amountOut) {
         // verify path
         if (path.length < 3 || swapParams.length != (path.length - 1) / 2 || path.length % 2 == 0)
             revert('SaddleInvalidPath');
